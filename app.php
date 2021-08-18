@@ -1,6 +1,6 @@
 <?php
 
-$gender = "female"; // cinsiyet (male/female)
+$gender = "male"; // cinsiyet (male/female)
 $weight = 55; // kilo (kg)
 $height = 170; // boy (cm)
 $age = 25; // yaş (sene)
