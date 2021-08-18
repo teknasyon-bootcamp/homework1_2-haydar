@@ -1,6 +1,6 @@
 <?php
 
-$gender = "male"; // cinsiyet (male/female)
+$gender = "female"; // cinsiyet (male/female)
 $weight = 55; // kilo (kg)
 $height = 170; // boy (cm)
 $age = 25; // yaş (sene)
@@ -34,3 +34,31 @@ $guess = "1470"; // Tahmin edilen değer
  * 
  * yazması gerekiyor.
  */
+
+ $femaleBasicValue = 447.593;
+ $femaleWeightRate = 9.247;
+ $femaleHeightRate = 3.098;
+ $femaleAgeRate = 4.330;
+
+ $maleBasicValue = 88.362;
+ $maleWeightRate = 13.397;
+ $maleHeightRate = 4.799;
+ $maleAgeRate = 5.677;
+ 
+ # Let's clarify which variable takes to which value
+
+ $basicValue = ${$gender."BasicValue"};
+ $weightRate = ${$gender."WeightRate"};
+ $heightRate = ${$gender."HeightRate"};
+ $ageRate = ${$gender."AgeRate"};
+
+ $bmr = $basicValue + ($weightRate*$weight) + ($heightRate*$height) - ($ageRate*$age);
+
+# Compare between guess and BMR
+
+if ($bmr == $guess) 
+    echo "Tahmin değerine eşit";
+elseif($bmr>$guess)
+    echo "Tahmin değerinden büyük";
+elseif($bmr<$guess)
+    echo "Tahmin değerinden küçük";
