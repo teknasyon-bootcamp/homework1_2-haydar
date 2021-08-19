@@ -54,6 +54,8 @@ $ageRate = ${$gender . "AgeRate"};
 
 $bmr = $basicValue + ($weightRate * $weight) + ($heightRate * $height) - ($ageRate * $age);
 
+echo "BMR : ". $bmr. "</br>";
+
 # Compare between guess and BMR
 
 if ($bmr == $guess)
